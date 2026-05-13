@@ -1,0 +1,45 @@
+fun apply(f, x) {
+  return f(x);
+}
+
+fun double(n) {
+  return n * 2;
+}
+
+fun square(n) {
+  return n * n;
+}
+
+print apply(double, 5);
+print apply(square, 5);
+
+fun compose(f, g) {
+  fun h(x) {
+    return f(g(x));
+  }
+  return h;
+}
+
+var dblSq = compose(double, square);
+print dblSq(3);
+
+fun twice(f) {
+  fun g(x) {
+    return f(f(x));
+  }
+  return g;
+}
+
+var quad = twice(double);
+print quad(3);
+
+fun makeAdder(n) {
+  fun add(x) {
+    return x + n;
+  }
+  return add;
+}
+
+var add1 = makeAdder(1);
+var add2 = makeAdder(2);
+print add1(add2(10));

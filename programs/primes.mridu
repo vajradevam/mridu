@@ -1,0 +1,24 @@
+fun mod(a, b) {
+  while (a >= b) a = a - b;
+  return a;
+}
+
+fun isPrime(n) {
+  if (n < 2) return false;
+  var i = 2;
+  while (i * i <= n) {
+    if (mod(n, i) == 0) return false;
+    i = i + 1;
+  }
+  return true;
+}
+
+var count = 0;
+var n = 2;
+while (count < 10) {
+  if (isPrime(n)) {
+    print n;
+    count = count + 1;
+  }
+  n = n + 1;
+}

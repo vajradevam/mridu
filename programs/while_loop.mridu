@@ -1,0 +1,24 @@
+var i = 0;
+while (i < 5) {
+  print i;
+  i = i + 1;
+}
+
+var j = 0;
+while (j < 0) {
+  print "never";
+}
+
+var k = 0;
+while (k < 1) {
+  print k;
+  k = k + 1;
+}
+
+var s = 0;
+var n = 1;
+while (n <= 10) {
+  s = s + n;
+  n = n + 1;
+}
+print s;

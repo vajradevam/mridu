@@ -1,0 +1,41 @@
+class Base {
+  init(x) {
+    this.x = x;
+  }
+  val() {
+    return this.x;
+  }
+}
+class Derived < Base {
+  init(x, y) {
+    super.init(x);
+    this.y = y;
+  }
+  val() {
+    return super.val() + this.y;
+  }
+}
+var d = Derived(3, 7);
+print d.val();
+
+class Level1 {
+  m() { return 1; }
+}
+class Level2 < Level1 {
+  m() { return super.m() + 2; }
+}
+class Level3 < Level2 {
+  m() { return super.m() + 4; }
+}
+print Level3().m();
+
+class Top {
+  l() { return "top"; }
+}
+class Mid < Top {
+  l() { return "mid"; }
+}
+class Bot < Mid {
+  l() { return super.l(); }
+}
+print Bot().l();

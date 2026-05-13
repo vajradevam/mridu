@@ -1,0 +1,15 @@
+print !true;
+print !false;
+print !!true;
+print true and true;
+print true and false;
+print false and true;
+print false and false;
+print true or false;
+print false or true;
+print false or false;
+print nil and true;
+print nil or true;
+print true and nil;
+print false or 42;
+print 0 or 1;

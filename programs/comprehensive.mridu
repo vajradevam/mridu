@@ -1,0 +1,76 @@
+fun fib(n) {
+  if (n <= 1) return n;
+  return fib(n - 1) + fib(n - 2);
+}
+
+fun isEven(n) {
+  if (n == 0) return true;
+  return isOdd(n - 1);
+}
+fun isOdd(n) {
+  if (n == 0) return false;
+  return isEven(n - 1);
+}
+
+class Accum {
+  init() {
+    this.total = 0;
+  }
+  add(n) {
+    this.total = this.total + n;
+    return this;
+  }
+  sum() {
+    return this.total;
+  }
+}
+
+class FastAccum < Accum {
+  init() {
+    super.init();
+    this.count = 0;
+  }
+  add(n) {
+    super.add(n);
+    this.count = this.count + 1;
+    return this;
+  }
+  avg() {
+    return this.total / this.count;
+  }
+}
+
+var s = 0;
+for (var i = 1; i <= 10; i = i + 1) {
+  if (i > 5) {
+    s = s + i;
+  }
+}
+print s;
+
+print fib(10);
+print isEven(10);
+print isOdd(10);
+print isEven(7);
+
+var a = Accum();
+a.add(5).add(10).add(15);
+print a.sum();
+
+var fa = FastAccum();
+fa.add(2).add(4).add(6);
+print fa.sum();
+print fa.avg();
+
+fun mkCounter() {
+  var c = 0;
+  fun inc() {
+    c = c + 1;
+    return c;
+  }
+  return inc;
+}
+
+var c = mkCounter();
+print c();
+print c();

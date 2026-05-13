@@ -1,0 +1,20 @@
+var a = "global";
+print a;
+{
+  print a;
+  var b = "inner";
+  print b;
+}
+print a;
+
+var x = "first";
+{
+  var x = "second";
+  print x;
+  {
+    var x = "third";
+    print x;
+  }
+  print x;
+}
+print x;

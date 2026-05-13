@@ -1,0 +1,41 @@
+class Box {
+  init(v) {
+    this.v = v;
+  }
+  add(n) {
+    this.v = this.v + n;
+    return this;
+  }
+  mul(n) {
+    this.v = this.v * n;
+    return this;
+  }
+  get() {
+    return this.v;
+  }
+}
+
+var b = Box(0);
+b.add(5).add(3);
+print b.get();
+
+var c = Box(2);
+c.mul(3).add(1).mul(2);
+print c.get();
+
+class Builder {
+  init() {
+    this.s = "";
+  }
+  push(ch) {
+    this.s = this.s + ch;
+    return this;
+  }
+  build() {
+    return this.s;
+  }
+}
+
+var buf = Builder();
+buf.push("a").push("b").push("c");
+print buf.build();

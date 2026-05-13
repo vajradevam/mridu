@@ -1,0 +1,30 @@
+# Binaries
+/mridu
+/mridu-*
+/cmd/mridu/mridu
+/cmd/mridu/mridu-*
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary, built with `go test -c`
+*.test
+*.out
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Go
+/vendor/
+go.work
+go.work.sum

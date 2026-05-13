@@ -1,0 +1,24 @@
+class A {
+  m() { print "A"; }
+  n() { print "A.n"; }
+}
+class B < A {
+  m() { print "B"; }
+}
+class C < B {}
+
+A().m();
+B().m();
+C().m();
+A().n();
+B().n();
+C().n();
+
+class Grand {
+  f() { return "grand"; }
+}
+class Parent < Grand {
+  f() { return "parent"; }
+}
+class Child < Parent {}
+print Child().f();

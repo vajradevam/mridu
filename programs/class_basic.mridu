@@ -1,0 +1,30 @@
+class Empty {
+  m() {}
+}
+Empty().m();
+print "ok";
+
+class Point {
+  init(x, y) {
+    this.x = x;
+    this.y = y;
+  }
+  mag() {
+    return this.x * this.x + this.y * this.y;
+  }
+}
+
+var p = Point(3, 4);
+print p.mag();
+p.x = 0;
+p.y = 0;
+print p.mag();
+
+class Dog {
+  speak() {
+    print "woof";
+  }
+}
+var d = Dog();
+d.speak();
+d.speak();

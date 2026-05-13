@@ -1,0 +1,22 @@
+if (true) print 1;
+if (false) print 2;
+if (false) print 3; else print 4;
+if (true) print 5; else print 6;
+
+var n = 2;
+if (n < 2) print "a";
+else if (n < 4) print "b";
+else print "c";
+
+n = 5;
+if (n < 2) print "a";
+else if (n < 4) print "b";
+else print "c";
+
+n = 0;
+if (n < 2) print "a";
+else if (n < 4) print "b";
+else print "c";
+
+if (true) { print "d"; print "e"; }
+if (false) { print "f"; print "g"; }

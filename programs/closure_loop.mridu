@@ -1,0 +1,24 @@
+fun makeList() {
+  var list = 0;
+  fun add(n) { list = n; }
+  fun get() { return list; }
+  return add;
+}
+
+var f = makeList();
+f(42);
+print "ok";
+print f;
+
+fun mkMul(n) {
+  fun mul(x) {
+    return x * n;
+  }
+  return mul;
+}
+
+var dbl = mkMul(2);
+var trip = mkMul(3);
+print dbl(5);
+print trip(5);
+print dbl(trip(4));

@@ -1,0 +1,11 @@
+print "hello" + " " + "world";
+print "" + "";
+print "a" + "b";
+print "ab" + "cd";
+print "x" + "y" + "z";
+var s = "foo";
+s = s + "bar";
+print s;
+print "one" + "two" + "three";
+print "1" + "2";
+print "  spaces  ";

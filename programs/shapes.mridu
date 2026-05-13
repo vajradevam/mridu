@@ -1,0 +1,55 @@
+class Shape {
+  init(x, y) {
+    this.x = x;
+    this.y = y;
+  }
+  area() {
+    return 0;
+  }
+  describe() {
+    print "shape";
+    print this.x;
+    print this.y;
+  }
+}
+
+class Circle < Shape {
+  init(x, y, r) {
+    super.init(x, y);
+    this.r = r;
+  }
+  area() {
+    return 3.14159 * this.r * this.r;
+  }
+  describe() {
+    super.describe();
+    print "radius:";
+    print this.r;
+  }
+}
+
+class Rect < Shape {
+  init(x, y, w, h) {
+    super.init(x, y);
+    this.w = w;
+    this.h = h;
+  }
+  area() {
+    return this.w * this.h;
+  }
+  describe() {
+    super.describe();
+    print "width:";
+    print this.w;
+    print "height:";
+    print this.h;
+  }
+}
+
+var shapes = Circle(0, 0, 5);
+shapes.describe();
+print shapes.area();
+
+shapes = Rect(1, 2, 3, 4);
+shapes.describe();
+print shapes.area();
